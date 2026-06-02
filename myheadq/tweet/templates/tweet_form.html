@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tweet
+{% endblock  %}
+
+{% block content %}
+<h1 class="text-center text-white mt-4">welcom to Django project</h1>
+
+<h2>
+    {% if form.instance.pk %}
+    Edit Tweet
+    {% else %}
+    Create Tweet
+    {% endif %}
+    <form class="POST" enctype="multipart/form-data" class = "form">
+            {{form.as_p}}
+    </form>
+</h2>
+{% endblock  %}
